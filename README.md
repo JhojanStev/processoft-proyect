@@ -36,6 +36,6 @@ Debe dirigirse a la carpeta 'src/enviroments' abrir los dos archivos y modificar
 
 Para subir cambios al repositorio es necesario utilizar los siguientes comandos.
 
-`git add .
+`git add .`
 `git commit -m "tu mensaje"`
 `git push origin master`
