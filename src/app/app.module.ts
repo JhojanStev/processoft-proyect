@@ -11,7 +11,6 @@ import { CFooterComponent } from './pages/c-footer/c-footer.component';
 import { CTermComponent } from './pages/c-term/c-term.component';
 import { CHeaderComponent } from './pages/c-header/c-header.component';
 import { CQuotationComponent } from './pages/c-inicio/c-quotation/c-quotation.component';
-import { BusquedaPipe } from './pipes/busqueda.pipe';
 
 @NgModule({
   declarations: [
@@ -21,7 +20,6 @@ import { BusquedaPipe } from './pipes/busqueda.pipe';
     CTermComponent,
     CHeaderComponent,
     CQuotationComponent,
-    BusquedaPipe,
 
 
   ],
