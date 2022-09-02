@@ -1,0 +1,121 @@
+/* You can add global styles to this file, and also import other style file
+s */
+
+@import '~animate.css/animate.min';
+body {
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+	width: 10px;
+
+}
+:root {
+  overflow-x: hidden;
+
+}
+
+/* Estilos barra (thumb) de scroll */
+
+::-webkit-scrollbar-thumb {
+	background: #000000;
+	border-radius: 8px;
+  overflow-x: hidden;
+
+}
+
+::-webkit-scrollbar-thumb:active {
+	background-color: #888888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #888888;
+	box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* Estilos track de scroll */
+
+::-webkit-scrollbar-track {
+	background: #e1e1e1;
+	border-radius: 4px;
+}
+
+::-webkit-scrollbar-track:hover,
+::-webkit-scrollbar-track:active {
+	background: #d4d4d4;
+}
+
+
+.rss {
+
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+ }
+
+
+ .active-navegacion {
+    /* background: #119ace; */
+    /* border: 1px solid #ffc107;
+    border-radius: 6px;
+    width: 300px;
+    padding: 6px; */
+    color: #000000 !important;
+}
+
+
+
+.cardTitulo {
+   background-color: white;
+}
+.cartText{
+   color: white;
+}
+
+.btn-link:hover{
+   text-decoration: none !important;
+   color: #ff9900 !important;
+}
+
+
+@media screen and (max-width: 900px) {
+   .galery , .flotanteCompu{
+   display:none;
+   }
+   }
+
+
+   @media screen and (min-width:900px) {
+   .flotanteCircle{
+   display:none;
+   }
+   }
+
+   .botonFlotante{
+       width:80px;
+     height:80px;
+       right:0;
+     bottom:0;
+     position:absolute;
+     border:none;
+     outline:none;
+     background: transparent !important;
+   }
+
+   .contenedor{
+      width:90px;
+      height:240px;
+      position:fixed;
+      right:0px;
+      bottom:0px;
+      z-index: +1;
+      padding: 50px;
+    }
+
+    .btn-info {
+      color: #fff;
+      background-color: #00aeef !important;
+      border-color: #00aeef !important;
+    }

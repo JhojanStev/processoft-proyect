@@ -1,0 +1,95 @@
+<div class="containerScreen">
+  <div class="screen">
+      <div class="screen__content">
+          <form class="login" ngNativeValidate [formGroup]="formRegister" (ngSubmit)="sendForm();sendEmail();">
+              <h2 class="tittle">¡Cotiza la tuya!</h2>
+
+              <div class="login__field">
+                  <i class="login__icon fa fa-car"></i>
+                  <select *ngIf="models" ngModel="modelos" type="text" class="login__input" formControlName="modelos">
+                    <option selected value="modelos" disabled>Selecciona vehiculo</option>
+                    <option *ngFor="let m of models['modelo']">
+                      {{m.nombreModelo}}
+                    </option>
+                  </select>
+              </div>
+              <div class="login__field">
+                  <i class="login__icon fas fa-user"></i>
+                  <input type="text" class="login__input" formControlName="nombre" placeholder="Nombre completo" pattern="[a-zA-Z ]{0,254}" required />
+                  <div class="errorPos text-center" *ngIf="formRegister.get('nombre').invalid && (formRegister.get('nombre').touched || formRegister.get('nombre').dirty )">
+                      <strong class="str" *ngIf="formRegister.get('nombre').hasError('required')">
+                          <p class="error">Campo requerido *</p>
+                      </strong>
+                      <strong class="str" *ngIf="formRegister.get('nombre').hasError('pattern')">
+                          <p class="error">Este campo solo admite letras *</p>
+                      </strong>
+                  </div>
+              </div>
+              <div class="login__field">
+                  <i class="login__icon fas fa-at"></i>
+                  <input type="text" class="login__input" formControlName="correo" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required />
+                  <div class="errorPos text-center" *ngIf="formRegister.get('correo').invalid && (formRegister.get('correo').touched || formRegister.get('correo').dirty )">
+                      <strong class="str" *ngIf="formRegister.get('correo').hasError('required')">
+                          <p class="error">Campo requerido *</p>
+                      </strong>
+                      <strong class="str" *ngIf="formRegister.get('correo').hasError('email') || formRegister.get('correo').hasError('pattern')">
+                          <p class="error">Escriba un correo valido*</p>
+                      </strong>
+                  </div>
+              </div>
+              <div class="login__field">
+                  <i class="login__icon fas fa-phone"></i>
+                  <input type="tel" class="login__input" formControlName="celular" placeholder="Número Celular" pattern="[0-9]+" maxlength="10" required />
+                  <div class="errorPos text-center" *ngIf="formRegister.get('celular').invalid && (formRegister.get('celular').touched || formRegister.get('celular').dirty )">
+                      <strong class="str" *ngIf="formRegister.get('celular').hasError('required')">
+                          <p class="error">Campo requerido *</p>
+                      </strong>
+                      <strong class="str" *ngIf="formRegister.get('celular').hasError('maxlength')">
+                          <p class="error">Cantidad máxima de caracteres (10) *</p>
+                      </strong>
+                      <strong class="str" *ngIf="formRegister.get('celular').hasError('pattern')"> <p class="error">Este campo solo admite números * *</p></strong>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-6">
+                    <div class="login__field">
+                      <i class="login__icon fa fa-city"></i>
+                      <select *ngIf="depas" ngModel="departamento" type="text" class="login__input" formControlName="departamento">
+                          <option value="departamento" selected disabled>Departamento</option>
+                          <option *ngFor="let dato of depas['departamento']">
+                            {{dato.nombreDepartamento}}
+                          </option>
+                      </select>
+                  </div>
+                  </div>
+                  <div class="col-6">
+                      <div class="login__field">
+                          <i class="login__icon fa fa-location"></i>
+                          <select *ngIf="munic" ngModel="municipio"  type="text" class="login__input" formControlName="municipio">
+                              <option  value="municipio" selected disabled>Ciudad</option>
+                              <option *ngFor="let dato of munic['municipio']">
+                                {{dato.nombreMunicipio}}
+                              </option>
+                          </select>
+                      </div>
+                  </div>
+              </div>
+              <div class="tacbox">
+                  <input id="checkbox" type="checkbox" formControlName="aceptoTerminos" required />
+                  <label for="checkbox" style="margin-left: 5px;">
+                      Acepto la politica de <a target="_blank" href="https://www.ssangyong.com.co/wp-content/uploads/2020/08/PTDP-SSANGYONG-MOTOR-COLOMBIA.pdf">Tratamiento de datos personales</a>.
+                  </label>
+                  <div class="errorPos text-center" *ngIf="formRegister.get('aceptoTerminos').invalid && formRegister.get('celular').touched">
+                      <strong class="str" *ngIf="formRegister.get('aceptoTerminos').hasError('required')">
+                          <p class="error">Debe aceptar los términos *</p>
+                      </strong>
+                  </div>
+              </div>
+              <button class="button login__submit">
+                  <span class="button__text">Enviar datos</span>
+                  <i class="button__icon fas fa-chevron-right"></i>
+              </button>
+          </form>
+      </div>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+.container1{
+  height: 100vh;
+  position: relative;
+}
+
+
+.panel{
+    font-family: 'Source Sans Pro';
+    font-size: 1.3em;
+    position: absolute;
+    z-index: 10;
+    width: 80%;
+    height: 60%;
+    background: rgba(0, 0, 0, 0.426);
+    top: 25%;
+    left: 10%;
+    border-radius: 4px;
+    z-index: 100;
+    display: block;
+}
+
+
+.imgSs{
+    margin-top: 25%;
+    width: 60%;
+    height: 400px;
+}

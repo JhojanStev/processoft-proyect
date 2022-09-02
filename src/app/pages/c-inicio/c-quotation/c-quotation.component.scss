@@ -1,0 +1,121 @@
+// @import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: Raleway, sans-serif;
+}
+
+
+
+.containerScreen {
+	display: flex;
+  margin-top: 15%;
+	// align-items: center;
+	justify-content: right;
+  height: 100%;
+	min-height: 100vh;
+}
+
+.tittle{
+  font-weight: bold;
+}
+
+.screen {
+	background: #fff;
+  border-radius: 15px;
+	position: relative;
+	height: 660px;
+	width: 400px;
+	box-shadow: #000;
+}
+
+.screen__content {
+	z-index: 1;
+
+	position: relative;
+	height: 100%;
+}
+
+
+
+
+.login {
+	padding: 12px;
+	padding-top: 10%;
+  align-items: center;
+}
+
+.login__field {
+	padding: 20px 0px;
+	position: relative;
+}
+
+.login__icon {
+	position: absolute;
+	top: 30px;
+	color: #000000;
+}
+
+.login__input {
+	border: none;
+	border-bottom: 2px solid #D1D1D4;
+	background: none;
+	padding: 10px;
+	padding-left: 24px;
+	font-weight: 700;
+	width: 75%;
+	transition: .2s;
+}
+
+.login__input:active,
+.login__input:focus,
+.login__input:hover {
+	outline: none;
+	border-bottom-color: #000000;
+}
+
+.login__submit {
+	background: rgb(0, 0, 0);
+	font-size: 17px;
+	margin-top: 30px;
+	padding: 16px 20px;
+	border-radius: 26px;
+	border: 1px solid #D4D3E8;
+	// text-transform: uppercase;
+	font-weight: 500;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	color: #ffffff;
+	box-shadow: 0px 2px 2px #ffffff;
+	cursor: pointer;
+	transition: .2s;
+}
+
+.login__submit:active,
+.login__submit:focus,
+.login__submit:hover {
+	border-color: #ffffff;
+	outline: none;
+}
+
+.button__icon {
+	font-size: 24px;
+	margin-left: auto;
+	color: #ffffff;
+}
+.tacbox{
+  font-size: 13px;
+}
+
+.str{
+  color: rgb(156, 65, 65);
+}
+
+.errorPos{
+  margin-left: 110px;
+  position: absolute;
+  justify-content: center;
+}
