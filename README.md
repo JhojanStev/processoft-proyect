@@ -2,7 +2,7 @@
 
 Este proyecto se generó con [Angular CLI](https://github.com/angular/angular-cli) versión 14.1.1.
 
-##Instrucciones de uso para Front-end
+## Instrucciones de uso para Front-end
 
 Abrirlo desde un entorno de desarrollo (recomendado Visual Studio)
 Tener instalado nodejs, nodemon, angular CLI en la versión 14 y GIT.
