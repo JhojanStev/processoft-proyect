@@ -39,7 +39,7 @@
               </div>
               <div class="login__field">
                   <i class="login__icon fas fa-phone"></i>
-                  <input type="tel" class="login__input" formControlName="celular" placeholder="Número Celular" pattern="[0-9]+" maxlength="10" required />
+                  <input type="number" class="login__input" formControlName="celular" placeholder="Número Celular" onKeyPress="if(this.value.length==10) return false;" required />
                   <div class="errorPos text-center" *ngIf="formRegister.get('celular').invalid && (formRegister.get('celular').touched || formRegister.get('celular').dirty )">
                       <strong class="str" *ngIf="formRegister.get('celular').hasError('required')">
                           <p class="error">Campo requerido *</p>
