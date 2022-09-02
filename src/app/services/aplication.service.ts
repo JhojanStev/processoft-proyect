@@ -97,7 +97,7 @@ export class AplicationService {
         Swal.fire({
           icon: 'error',
           title: 'Algo salio mal',
-          text: 'El correo ya existe en la base de datos o ya hiciste tu cotización.',
+          text:  e.error.mensaje ,
         });
 
         return of(null);

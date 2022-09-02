@@ -58,6 +58,7 @@ export class CQuotationComponent implements OnInit {
    */
   // tslint:disable-next-line:typedef
   sendForm() {
+    let date: Date = new Date();
     let cotizacion = {
       nombre: this.formRegister.get('nombre').value,
       email: this.formRegister.get('correo').value,
@@ -65,6 +66,7 @@ export class CQuotationComponent implements OnInit {
       municipio: this.formRegister.get('municipio').value,
       departamento: this.formRegister.get('departamento').value,
       modelos: this.formRegister.get('modelos').value,
+      fecha: date.getDate()+'/'+ date.getMonth()+'/'+ date.getFullYear()
     };
     this.globalService.postQuotation(cotizacion).then(() => {});
   }
